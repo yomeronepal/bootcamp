@@ -1,0 +1,18 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    
+    <h1>Hello World</h1>
+    {% for q in qs %}
+    <h1>{{q.name}}</h1>
+    <h1>$ {{q.price}}</h1>
+    {% if q.main_image %}
+    <img src= "{{q.main_image.url}}" height="200px" />
+    {% endif %}
+    {% endfor %}
+</body>
+</html>
